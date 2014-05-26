@@ -3,7 +3,7 @@ ng-threshold
 
 ng-threshold is a simple angular.js directive that allows you to specify the maximum amount of allowed time for an image to load. If the image fails to load because the maximum amount of time has elapsed or because the image failed to load immediatly (because of a 404 error, for example), a fallback image is loaded instead. 
 
-how to use
+How to use
 ==========
 
 1. include the ng-threshold.js directive in your index file
@@ -12,7 +12,7 @@ how to use
 4. specify data-src-fallback (this is your fallback URL in case the original image does not load)
 
 
-example 
+Example 
 ==========
 
 ```js
@@ -20,11 +20,14 @@ example
 <html>
 <head>
 <body ng-app="myAngularApp">
-    <img  src="http://localhost:23080/this_image_takes_more_than_5_sec_to_load.jpg" data-src-fallback="https://www.google.com/images/srpr/logo11w.png" data-src-maxtime="5000" threshold=""/>
+    <img  src="http://slow-server.not.really/this_image_takes_more_than_5_sec_to_load.jpg" 
+    data-src-fallback="https://www.google.com/images/srpr/logo11w.png" 
+    data-src-maxtime="5000" 
+    threshold=""/>
   </div>
 ```
 
-license  
+License  
 ==========
 
 ng-threshold is developed by <a href="https://www.linkedin.com/profile/view?id=116617874">Or Hiltch</a> and 

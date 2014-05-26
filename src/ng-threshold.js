@@ -1,5 +1,4 @@
 angular.module('ng-threshold', []).directive('threshold', function($timeout) {
-  var then = new Date().getTime();
   var loadSuccess = false;
   return {
     link: function(scope, element, attrs) {

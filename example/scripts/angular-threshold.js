@@ -1,6 +1,5 @@
 angular.module('ng-threshold', []).directive('threshold', function($timeout) {
-  var then = new Date().getTime();
-  var loadSuccess = false;
+  var loadSuccess = {};
   return {
     link: function(scope, element, attrs) {
       element.bind('error', function() {
@@ -9,7 +8,7 @@ angular.module('ng-threshold', []).directive('threshold', function($timeout) {
         });
       });
       element.bind('load', function() {
-        loadSuccess = true;
+        loadSuccess[element.attr('src')] = true;
       });
       
       var timeout = -1;
@@ -18,9 +17,11 @@ angular.module('ng-threshold', []).directive('threshold', function($timeout) {
       } catch (ex) {
       }
       if (timeout != -1) {
-        if (!loadSuccess) {
+        if (!loadSuccess[element.attr('src')]) {
           $timeout(function() {
-            element.attr('src', element.attr('data-src-fallback'));
+            if (!loadSuccess[element.attr('src')]) {
+              element.attr('src', element.attr('data-src-fallback'));
+            }
           }, timeout);
         }
       }

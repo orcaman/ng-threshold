@@ -5,13 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title></title>
   <meta name="description" content="">
-  <meta name="viewport" content="width=device-width">
+  <meta name="viewport" content="width=device-width"> 
 </head>
 <body ng-app="ng-threshold">
   <div class="container" ng-view=""></div>
 
   <div>
-    <img  src="http://localhost:23080/long.jpg" data-src-fallback="https://www.google.com/images/srpr/logo11w.png" data-src-maxtime="5000" threshold=""/>
+  <img  src="http://localhost:23080/long.jpg?t=5" data-src-fallback="https://www.google.com/images/srpr/logo11w.png" data-src-maxtime="4000" threshold=""/>
+    <br>
+    <img  src="http://localhost:23080/long.jpg?t=2" data-src-fallback="https://www.google.com/images/srpr/logo11w.png" data-src-maxtime="4000" threshold=""/>
   </div>
 
   <script src="bower_components/angular/angular.js"></script>

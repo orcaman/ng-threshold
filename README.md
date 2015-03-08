@@ -30,9 +30,6 @@ Example
 License  
 ==========
 
-ng-threshold is developed by <a href="https://www.linkedin.com/profile/view?id=116617874">Or Hiltch</a> and 
-<a href="https://www.linkedin.com/profile/view?id=3535001">Maurice McGinley</a>
-
 The MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

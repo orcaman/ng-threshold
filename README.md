@@ -15,7 +15,7 @@ How to use
 Example 
 ==========
 
-```js
+```html
 <!doctype html>
 <html>
 <head>
